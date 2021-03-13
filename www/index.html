@@ -2,26 +2,55 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; font-src ; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/index.css">
-        <title>MediaPlayer</title>
+        <link href="../www/css/icon.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../www/css/materialize.min.css"  media="screen,projection"/>
+        <title>Player</title>
     </head>
     <body>
-        <div id="playbackB">
-            <button id="ff-btn">Forward</button>
-            <button id="play-btn">Play</button>
-            <button id="pause-btn">Pause</button>
-            <button id="rew-btn">Backward</button>
+        <section class="page active" id="home">
+            <div id="list">
+        
+            </div>
+        </section>
+        <section class="page" id="details">
+            <div class="main_div">
+                <div class="music_container">
+                    <h2 id="title"></h2>
+                    <h3 id="artist"></h3>
+                    <div class="img-container">
+                        <img class="rotateImage" src="" alt="">
+                    </div>
+                
+                <div class="sliderContainer">
+                    <div class="currentTime"></div>
+                    <div class="slider"></div>
+                    <div class="maxTime"></div>
+                </div>
+
+                <div class="music_controls">
+                    <div id="playbackA">
+                        <button id="ff-btn">Forward</button>
+                        <button id="play-btn">Play</button>
+                        <button id="pause-btn">Pause</button>
+                        <button id="rew-btn">Backward</button>
+                    </div>
+                    <div id="playbackB">
+                        <button id="up-btn">Up</button>
+                        <button id="down-btn">Down</button>
+                    </div>
+                    <button id="back">Back</button>
+                </div>
+            </div>
         </div>
-        <div id="playbackB">
-            <button id="up-btn">Up</button>
-            <button id="down-btn">Down</button>
-        </div>
+        </section>
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
+        <script type="text/javascript" src="../www/js/materialize.min.js"></script>    
     </body>
 </html>
